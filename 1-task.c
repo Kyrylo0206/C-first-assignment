@@ -73,9 +73,9 @@ int main(void) {
                 printf("Text found at line %d.\n", position);
             }
         } else if (user_input == 8) {
-            clearConsole(); // Clear the console
+            clearConsole();
         } else if (user_input == 9) {
-            Free_Text_storage(); // Free allocated memory before exiting
+            Free_Text_storage();
             return 0;
         }
     }
@@ -124,7 +124,7 @@ void appendText(char *newText) {
 void newLine() {
     ensureCapacity();
     text[totalLines][0] = '\0';
-    totalLines++;
+    totalLines+1;
 }
 
 void saveToFile(const char *filename) {
